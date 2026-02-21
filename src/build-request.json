@@ -1,0 +1,114 @@
+{
+  "kind": "build_request",
+  "title": "Create finance record-keeping application",
+  "projectName": "Finance Tracker",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model to store financial records with fields for date, description, amount, category (income/expense), and unique identifier",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Financial records can be stored with date, description, amount, and category",
+        "Each record has a unique identifier",
+        "Records persist across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement backend functions to add new financial records, retrieve all records, and delete records by ID",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can add new financial records",
+        "Users can retrieve a list of all their financial records",
+        "Users can delete specific records by ID"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a frontend form to input new financial records with fields for date, description, amount, and category selection (income or expense)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form includes date picker, text input for description, numeric input for amount, and category selector",
+        "Form validates that all required fields are filled before submission",
+        "Successful submission adds the record to the backend and refreshes the display"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Display all financial records in a sortable table showing date, description, amount, category, and a delete action",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Records are displayed in a table format",
+        "Table shows date, description, amount, and category for each record",
+        "Each record has a delete button that removes it from the list",
+        "Income and expense entries are visually distinguished"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Calculate and display total income, total expenses, and net balance based on all recorded transactions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Summary section shows total income amount",
+        "Summary section shows total expenses amount",
+        "Summary section shows net balance (income minus expenses)",
+        "Totals update automatically when records are added or deleted"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Design a clean, professional interface with a cohesive visual theme using warm earth tones (terracotta, sage green, cream) with clear typography and organized card-based layouts that convey financial clarity and trust",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette uses warm earth tones consistently throughout the interface",
+        "Typography is clear and readable with appropriate hierarchy",
+        "Layout uses card-based components for organizing information",
+        "Overall design conveys professionalism and financial trustworthiness"
+      ]
+    }
+  ],
+  "constraints": [],
+  "nonGoals": [
+    "Multi-user authentication or user-specific record isolation",
+    "Budget planning or forecasting features",
+    "Receipt uploads or file attachments",
+    "Export to CSV or other formats",
+    "Recurring transaction templates",
+    "Multi-currency support"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

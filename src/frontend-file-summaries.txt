@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the finance tracker layout with header, financial summary, record form, records table, and footer with proper branding.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hook that manages all backend interactions for financial records including fetching, adding, and deleting records with proper state management and cache invalidation.",
+  "frontend/src/components/RecordForm.tsx": "Form component for adding new financial records with date picker, description input, amount input, and category selector with full validation and error handling.",
+  "frontend/src/components/RecordsTable.tsx": "Table component that displays all financial records in a sortable format with visual distinction between income and expense entries, and delete functionality with confirmation dialog.",
+  "frontend/src/components/FinancialSummary.tsx": "Summary component that calculates and displays total income, total expenses, and net balance in a three-card layout with color-coded indicators.",
+  "frontend/src/index.css": "Global styles implementing a warm earth tones color system (terracotta, sage green, cream) using OKLCH color space with both light and dark mode support.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom warm earth tone colors (terracotta, sage, cream) and Inter font family for professional typography."
+}

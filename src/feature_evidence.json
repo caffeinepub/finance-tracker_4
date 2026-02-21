@@ -1,0 +1,79 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-frontend-form-to-input-new-financial-records-with-fields-for-date-description-amount-and-category-selection-income-or-expense",
+      "featureTitle": "Create a frontend form to input new financial records with fields for date, description, amount, and category selection (income or expense)",
+      "files": [
+        "frontend/src/components/RecordForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-all-financial-records-in-a-sortable-table-showing-date-description-amount-category-and-a-delete-action",
+      "featureTitle": "Display all financial records in a sortable table showing date, description, amount, category, and a delete action",
+      "files": [
+        "frontend/src/components/RecordsTable.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-calculate-and-display-total-income-total-expenses-and-net-balance-based-on-all-recorded-transactions",
+      "featureTitle": "Calculate and display total income, total expenses, and net balance based on all recorded transactions",
+      "files": [
+        "frontend/src/components/FinancialSummary.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-clean-professional-interface-with-a-cohesive-visual-theme-using-warm-earth-tones-terracotta-sage-green-cream-with-clear-typography-and-organized-card-based-layouts-that-convey-financial-clarity-and-trust",
+      "featureTitle": "Design a clean, professional interface with a cohesive visual theme using warm earth tones (terracotta, sage green, cream) with clear typography and organized card-based layouts that convey financial clarity and trust",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

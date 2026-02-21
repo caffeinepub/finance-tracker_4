@@ -1,0 +1,89 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Finance Tracker Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-3",
+      "summary": "Create a frontend form to input new financial records",
+      "acceptanceCriteria": [
+        "Form includes date picker, text input for description, numeric input for amount, and category selector",
+        "Form validates that all required fields are filled before submission",
+        "Successful submission adds the record to the backend and refreshes the display"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RecordForm.tsx",
+          "operation": "create",
+          "description": "Create a form component with date picker, description text input, amount numeric input, and income/expense category selector. Implement form validation ensuring all fields are required. On submit, convert the date to DateTime format matching the backend interface (day, month, year, hour, minute, second), call backend addRecord method with the form data, and trigger a callback to refresh the records list."
+        },
+        {
+          "path": "frontend/src/hooks/useFinancialRecords.ts",
+          "operation": "create",
+          "description": "Create a custom hook that manages financial records state, provides functions to fetch all records from backend getRecords method, add new records via backend addRecord, and delete records via backend deleteRecord. Include loading and error states."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Display all financial records in a sortable table with delete actions",
+      "acceptanceCriteria": [
+        "Records are displayed in a table format",
+        "Table shows date, description, amount, and category for each record",
+        "Each record has a delete button that removes it from the list",
+        "Income and expense entries are visually distinguished"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RecordsTable.tsx",
+          "operation": "create",
+          "description": "Create a table component that displays financial records with columns for date (formatted from DateTime object), description, amount (formatted as currency), and category. Include a delete button for each row that calls the delete function from useFinancialRecords hook. Apply visual distinction for income (green styling) vs expense (red styling) entries. Format DateTime objects to readable date strings."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Calculate and display financial summary with totals and net balance",
+      "acceptanceCriteria": [
+        "Summary section shows total income amount",
+        "Summary section shows total expenses amount",
+        "Summary section shows net balance (income minus expenses)",
+        "Totals update automatically when records are added or deleted"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FinancialSummary.tsx",
+          "operation": "create",
+          "description": "Create a summary component that receives the array of financial records, calculates total income by summing all records with category 'income', calculates total expenses by summing all records with category 'expense', and computes net balance as income minus expenses. Display these three values in a card-based layout with clear labels and formatted currency amounts."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Design a clean, professional interface with warm earth tones theme",
+      "acceptanceCriteria": [
+        "Color palette uses warm earth tones consistently throughout the interface",
+        "Typography is clear and readable with appropriate hierarchy",
+        "Layout uses card-based components for organizing information",
+        "Overall design conveys professionalism and financial trustworthiness"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global CSS to define a color palette using warm earth tones: terracotta (#D4745E or similar) for accents, sage green (#8B9A7D or similar) for secondary elements, and cream (#F5F1E8 or similar) for backgrounds. Set typography with clear font families and sizes establishing visual hierarchy. Ensure styling conveys professionalism and financial clarity."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme to include custom color palette with terracotta, sage green, and cream as named colors (e.g., 'terracotta', 'sage', 'cream'). Configure typography settings for clear hierarchy. These theme values will be used throughout components for consistent styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update App component to use card-based layout structure. Import and render RecordForm, RecordsTable, and FinancialSummary components. Use useFinancialRecords hook to manage state and pass records data and handler functions to child components. Apply warm earth tone styling using Tailwind classes with the custom theme colors. Structure the layout to display the summary at the top, followed by the form, and then the records table."
+        }
+      ]
+    }
+  ]
+}

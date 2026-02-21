@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Finance record-keeping application",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-form-to-input-new-financial-records-with-fields-for-date-description-amount-and-category-selection-income-or-expense",
+      "title": "Create a frontend form to input new financial records with fields for date, description, amount, and category selection (income or expense)",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-all-financial-records-in-a-sortable-table-showing-date-description-amount-category-and-a-delete-action",
+      "title": "Display all financial records in a sortable table showing date, description, amount, category, and a delete action",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-calculate-and-display-total-income-total-expenses-and-net-balance-based-on-all-recorded-transactions",
+      "title": "Calculate and display total income, total expenses, and net balance based on all recorded transactions",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-clean-professional-interface-with-a-cohesive-visual-theme-using-warm-earth-tones-terracotta-sage-green-cream-with-clear-typography-and-organized-card-based-layouts-that-convey-financial-clarity-and-trust",
+      "title": "Design a clean, professional interface with a cohesive visual theme using warm earth tones (terracotta, sage green, cream) with clear typography and organized card-based layouts that convey financial clarity and trust",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create finance record-keeping application",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend data model to store financial records with fields for date, description, amount, category (income/expense), and unique identifier",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement backend functions to add new financial records, retrieve all records, and delete records by ID",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Finance Tracker",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Motoko actor implementing a financial record management system with CRUD operations (add, get, delete) and date-based sorting for income/expense records stored in a Map.",
+  "feature_evidence.json": "Feature evidence report documenting four implemented features: record input form, sortable records table, financial summary calculations, and warm earth-tone UI design with their associated files and test IDs.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of seven frontend files describing the React components, hooks, and styling that implement the finance tracker UI with warm earth tones and full CRUD functionality.",
+  "frontend/index.css": "Tailwind CSS base styles defining CSS custom properties for light and dark themes using OKLCH color space with neutral grayscale values and chart colors.",
+  "frontend/index.html": "HTML entry point for the Finance Tracker React application with viewport meta tag and root div mounting point.",
+  "frontend/src/App.tsx": "Main React component orchestrating the finance tracker layout with header, FinancialSummary, RecordForm, RecordsTable sections, and footer with caffeine.ai attribution.",
+  "frontend/src/components/FinancialSummary.tsx": "React component displaying three cards with calculated total income, total expenses, and net balance from financial records with color-coded indicators and loading states.",
+  "frontend/src/components/RecordForm.tsx": "React form component with date picker, description input, amount input, and category selector for adding new financial records with validation and error handling.",
+  "frontend/src/components/RecordsTable.tsx": "React table component displaying financial records with formatted dates and amounts, category badges, delete buttons with confirmation dialog, and empty state handling.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and manages an ICP actor instance using Internet Identity authentication, automatically invalidating and refetching dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides React context and hooks for Internet Identity authentication, managing login state, identity persistence, and delegation validation with configurable AuthClient options.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for managing financial records, providing functions to fetch all records, add new records, and delete records with automatic cache invalidation.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom warm earth tone color system (terracotta, sage, cream) for both light and dark modes, including CSS variables for UI components and typography.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query client and Internet Identity provider, then renders the root App component.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the default theme with custom warm earth tone colors, OKLCH color system, typography settings, animations, and responsive container configurations.",
+  "project_state.json": "Project metadata tracking implemented features (frontend form, sortable table, financial calculations, warm earth tone UI) and pending backend requirements (data model, CRUD functions) for a finance record-keeping application."
+}
